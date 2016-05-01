@@ -8,5 +8,9 @@
   <body>
     <h1>Bienvenido a <%= title %></h1>
     <p>El portal donde podrá crear sus propios juegos!</p>
+<<<<<<< HEAD
+    <p><a href="/author">Autor de la aplicación</a></p>
+=======
+>>>>>>> master
   </body>
 </html>

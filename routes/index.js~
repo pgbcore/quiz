@@ -4,6 +4,14 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Quiz' });
+<<<<<<< HEAD
+});
+
+/* GET author page. */
+router.get('/author', function(req, res, next) {
+  res.render('author', { title: 'Quiz' });
+=======
+>>>>>>> master
 });
 
 module.exports = router;
