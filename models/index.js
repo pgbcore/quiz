@@ -21,18 +21,10 @@ var sequelize = new Sequelize(url, { storage : storage, omitNull: true });
 var Quiz = sequelize.import(path.join(__dirname, 'quiz'));
 
 // sequelize.sync() crea e inicializa tabla de preguntas en DB
-sequelize
-.sync()
-.then(function() { // sync crea la tabla quiz
-   return
-     Quiz
-     .count()
-     .then(function (c) {
+sequelize.sync().then(function() { // sync crea la tabla quiz
+   return Quiz.count().then(function (c) {
         if (c==0) { // la tabla se inicializa si está vacía
-           return
-             Quiz
-             .create({ question: 'Capital de Italia', answer: 'Roma' })
-             .then(function() {
+           return Quiz.create({ question: 'Capital de Italia', answer: 'Roma' }).then(function() {
                 console.log('Base de datos inicializada con datos');
              });
         }
