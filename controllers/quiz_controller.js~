@@ -32,4 +32,10 @@ exports.check = function(req, res, next) {
       res.render('quizzes/result', { quiz: req.quiz, result: result, answer: answer});
 };
 
+// GET /quizzes/new
+exports.new= function(req, res, next) {
+      var quiz = models.Quiz.build({question: "", answer: ""});
+      res.render('quizzes/new', {quiz: quiz});
+};
+
 
